@@ -4,6 +4,9 @@ import heroHomeMobile from "./assets/homepage/hero-bg-mobile.jpg";
 import heroHomeTablet from "./assets/homepage/hero-bg-tablet.jpg";
 import heroHomeDesktop from "./assets/homepage/hero-bg-desktop.jpg";
 
+import enjoyPlaceMobile from "./assets/homepage/enjoyable-place-mobile.jpg";
+import localFood from "./assets/homepage/locally-sourced-mobile.jpg";
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -15,20 +18,65 @@ function App() {
           <h1 className="text-4xl mt-8 font-bold font-league tracking-widest text-white">
             dine
           </h1>
-          <p className="font-league text-center font-thin my-2 text-2xl text-white">
+          <p className="font-league text-center font-thin my-2 text-3xl text-white">
             Exquisite dining <br /> since 1989
           </p>
           <p className="font-league text-center font-thin my-4 px-5 text-white">
             Experience our seasonal menu in beautiful country surroundings. Eat
             the freshest produce from the comfort of our farmhouse.
           </p>
-          <button className="uppercase my-5 py-3 px-6 text-white font-league tracking-wider border">
+          <button className="uppercase w-3/4 my-5 py-4 text-white font-league tracking-wider border flex items-center justify-center">
             book a table
           </button>
         </div>
       </div>
 
-      <div className="">hello</div>
+      {/* ENJOYABLE PLACE SECTION */}
+      <div className="">
+        <div className="flex justify-center items-center -mt-24">
+          <img
+            src={enjoyPlaceMobile}
+            alt="enjoy_place"
+            className="shadow-md drop-shadow-md"
+          />
+        </div>
+        <div className="enjoy_container px-10">
+          <div className="my-10 flex flex-row justify-center items-center">
+            <div className="border border-red-200 w-2 h-2 rounded-full mx-2"></div>
+            <div className="border border-red-200 w-1/6 h-0"></div>
+          </div>
+          <h1 className="font-league text-center font-bold my-2 px-10 text-3xl">
+            Enjoyable place for all the family
+          </h1>
+          <p className="mx-4 px-4 text-center my-5">
+            Our relaxed surroundings make dining with us a great experience for
+            everyone. We can even arrange a tour of the farm before your meal.
+          </p>
+        </div>
+      </div>
+      <div className="">
+        <div className="flex justify-center items-center mt-10">
+          <img
+            src={localFood}
+            alt="localFood"
+            className="shadow-md drop-shadow-md"
+          />
+        </div>
+        <div className="enjoy_container px-10">
+          <div className="my-10 flex flex-row justify-center items-center">
+            <div className="border border-red-200 w-2 h-2 rounded-full mx-2"></div>
+            <div className="border border-red-200 w-1/6 h-0"></div>
+          </div>
+          <h1 className="font-league text-center font-extrabold my-2 px-10 text-3xl">
+            The most locally sourced food
+          </h1>
+          <p className="mx-4 px-4 text-center my-5">
+            All our ingredients come directly from our farm or local fishery. So
+            you can be sure that you’re eating the freshest, most sustainable
+            food.
+          </p>
+        </div>
+      </div>
     </main>
   );
 }
